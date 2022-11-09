@@ -1,5 +1,5 @@
-# hilinux
-My own attempt in to making my own  the LAZY script for Linux!
+# Simple Webhook Spammer
+Simple Webhook Spammer
 
 ## How to Install the module?
 To Install the module needed you need to..
