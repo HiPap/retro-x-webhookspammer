@@ -1,6 +1,8 @@
 # Retro X Webhook Spammer
 Retro X is a brand new webhook spammer more updates will be made to this project. 
 
+#
+
 ## Installation
 
 ### On Windows:
@@ -24,12 +26,18 @@ To install the modules needed you need to run
 
 
 
-
+#
 
 ## Contributing
 
 Pull requests are welcome as I want to improve this software for the fun of it. I see it as nothing more than a hobby project. I don't intend on causing harm to others. If there is any major changes you would like to do
 or potentially work with me add me on my Discord
+
+#
+## Roadmap:
+
+- website support (under development)
+- multiple webhooks controlled at once 
 
 ## License
 
