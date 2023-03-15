@@ -31,21 +31,26 @@ def MainMenu():
 
     if message_number == 'i':
         while True: #* controls infinite spam
+            amount += 1
             webhook = DiscordWebhook(url=link, content=message, rate_limit_retry=True)
             time.sleep(delay) #* changed delay from 3 to user input
             response = webhook.execute()
-            print(Fore.CYAN + 'Spamming webhook....')
+            print(Fore.CYAN + 'Sent Response! : Amount of messages sent:',amount,)
     else:
         for i in range(int(message_number)): #* controls numbered spam
+            amount += 1
             webhook = DiscordWebhook(url=link, content=message, rate_limit_retry=True)
             time.sleep(delay) #* changed delay from 3 to user input
             response = webhook.execute()
-            print(Fore.CYAN + 'Spamming webhook....')
+            print(Fore.CYAN + 'Sent Response! : Amount of messages sent:',amount,)
         MainMenu()
 
  except:
       print(Fore.CYAN + 'Webhook has been deleted, try again!')
       MainMenu()
-
 MainMenu()
 
+
+#todo fix the server
+#todo add the option of controlling multiple webhooks
+#todo make it so you can send images to webhooks
