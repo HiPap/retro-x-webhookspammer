@@ -4,7 +4,7 @@ from colorama import Fore
 import os
 
 
-os.system('cls & title Webhook X by HiPapi, optimised by kelpdude89')
+os.system('cls & title Retro X by HiPapi, optimised by kelpdude89')
 
 
 def MainMenu():
@@ -29,20 +29,22 @@ def MainMenu():
     message_number = input("how many messages would you like to send? ('i' for infinite) $ ") #* added options for how long you want the spam to last
     delay = float(input("How long do you want the delay between messages (in seconds) $ "))
 
+    amount = 0
+
     if message_number == 'i':
         while True: #* controls infinite spam
             amount += 1
             webhook = DiscordWebhook(url=link, content=message, rate_limit_retry=True)
             time.sleep(delay) #* changed delay from 3 to user input
             response = webhook.execute()
-            print(Fore.CYAN + 'Sent Response! : Amount of messages sent:',amount,)
+            print(Fore.CYAN + 'Sent Response! : Amount of messages sent:',amount)
     else:
         for i in range(int(message_number)): #* controls numbered spam
             amount += 1
             webhook = DiscordWebhook(url=link, content=message, rate_limit_retry=True)
             time.sleep(delay) #* changed delay from 3 to user input
             response = webhook.execute()
-            print(Fore.CYAN + 'Sent Response! : Amount of messages sent:',amount,)
+            print(Fore.CYAN + 'Sent Response! : Amount of messages sent:',amount)
         MainMenu()
 
  except:
